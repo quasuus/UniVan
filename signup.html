@@ -17,44 +17,40 @@
 
     <form id="signupForm" class="flex flex-col gap-5">
 
-
       <div>
-        <label for="user-type" class="block text-sm font-medium text-gray-300 mb-2">
+        <label for="role" class="block text-sm font-medium text-gray-300 mb-2">
           Are you a driver or a student?
         </label>
         <select
-          id="user-type"
-          name="user-type"
+          id="role"
+          name="role"
           required
           class="w-full p-3 bg-[#2a2638] text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
         >
           <option value="" disabled selected>Select an option</option>
-          <option value="conductor">Driver</option>
-          <option value="universitario">Student</option>
+          <option value="driver">Driver</option>
+          <option value="student">Student</option>
         </select>
       </div>
 
-
       <div id="conductor-fields" class="hidden flex flex-col gap-4">
-        <label for="vehicle-type" class="text-sm font-medium text-gray-300">Vehicle Type (Van)</label>
-        <input type="text" id="vehicle-type" name="vehicle-type" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+        <label for="type_card" class="text-sm font-medium text-gray-300">Vehicle Type (Van)</label>
+        <input type="text" id="type_card" name="type_card" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
 
-        <label for="license" class="text-sm font-medium text-gray-300">License Number</label>
-        <input type="text" id="license" name="license" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+        <label for="license_number" class="text-sm font-medium text-gray-300">License Number</label>
+        <input type="text" id="license_number" name="license_number" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
       </div>
-
 
       <div id="universitario-fields" class="hidden flex flex-col gap-4">
         <label for="career" class="text-sm font-medium text-gray-300">Career</label>
         <input type="text" id="career" name="career" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
 
-        <label for="University" class="text-sm font-medium text-gray-300">University</label>
-        <input type="text" id="University" name="University" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+        <label for="university" class="text-sm font-medium text-gray-300">University</label>
+        <input type="text" id="university" name="university" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
       </div>
 
-
-      <label for="full-name" class="text-sm font-medium text-gray-300">Full Name</label>
-      <input type="text" id="full-name" name="full-name" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+      <label for="nombre" class="text-sm font-medium text-gray-300">Full Name</label>
+      <input type="text" id="nombre" name="nombre" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
 
       <label for="age" class="text-sm font-medium text-gray-300">Age</label>
       <input type="number" id="age" name="age" required min="18" max="100" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
@@ -67,7 +63,6 @@
 
       <label for="password" class="text-sm font-medium text-gray-300">Password</label>
       <input type="password" id="password" name="password" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
-
 
       <button
         type="submit"
@@ -86,4 +81,3 @@
   <script src="signup.js"></script>
 </body>
 </html>
-
