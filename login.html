@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Log In - UniVan</title>
+</head>
+<body class="bg-[#161122] font-sans">
+
+
+  <nav class="flex justify-between items-center p-4 bg-[#1A122A] text-white shadow-md">
+    <a href="landingpage.html" class="flex space-x-4 text-white font-bold text-xl">UniVan</a>
+  </nav>
+
+ 
+  <main class="max-w-md mx-auto mt-16 p-8 bg-[#1f1c2e] rounded-3xl shadow-2xl">
+    <h1 class="text-center text-white text-2xl font-bold mb-8">Log In to UniVan</h1>
+
+    <form id="loginForm" class="flex flex-col gap-5">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+        />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 rounded-xl shadow-lg transition transform hover:scale-105 mt-4"
+      >
+        Log In
+      </button>
+    </form>
+
+    <p class="text-center text-white/60 text-sm mt-6">
+      Don't have an account? 
+      <a href="signup.html" class="underline hover:text-white font-medium">Sign Up</a>
+    </p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

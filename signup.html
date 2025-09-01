@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sign Up - UniVan</title>
+</head>
+<body class="bg-[#161122] font-sans">
+
+  <nav class="flex justify-between items-center p-4 bg-[#1A122A] text-white shadow-md">
+    <a href="landingpage.html" class="flex space-x-4 text-white font-bold text-xl">UniVan</a>
+  </nav>
+
+  <main class="max-w-md mx-auto mt-16 p-8 bg-[#1f1c2e] rounded-3xl shadow-2xl">
+    <h1 class="text-center text-white text-2xl font-bold mb-8">Sign Up for UniVan</h1>
+
+    <form id="signupForm" class="flex flex-col gap-5">
+
+
+      <div>
+        <label for="user-type" class="block text-sm font-medium text-gray-300 mb-2">
+          Are you a driver or a student?
+        </label>
+        <select
+          id="user-type"
+          name="user-type"
+          required
+          class="w-full p-3 bg-[#2a2638] text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="conductor">Driver</option>
+          <option value="universitario">Student</option>
+        </select>
+      </div>
+
+
+      <div id="conductor-fields" class="hidden flex flex-col gap-4">
+        <label for="vehicle-type" class="text-sm font-medium text-gray-300">Vehicle Type (Van)</label>
+        <input type="text" id="vehicle-type" name="vehicle-type" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+        <label for="license" class="text-sm font-medium text-gray-300">License Number</label>
+        <input type="text" id="license" name="license" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+      </div>
+
+
+      <div id="universitario-fields" class="hidden flex flex-col gap-4">
+        <label for="career" class="text-sm font-medium text-gray-300">Career</label>
+        <input type="text" id="career" name="career" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+        <label for="University" class="text-sm font-medium text-gray-300">University</label>
+        <input type="text" id="University" name="University" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+      </div>
+
+
+      <label for="full-name" class="text-sm font-medium text-gray-300">Full Name</label>
+      <input type="text" id="full-name" name="full-name" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+      <label for="age" class="text-sm font-medium text-gray-300">Age</label>
+      <input type="number" id="age" name="age" required min="18" max="100" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+      <label for="email" class="text-sm font-medium text-gray-300">Email</label>
+      <input type="email" id="email" name="email" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+      <label for="phone" class="text-sm font-medium text-gray-300">Phone</label>
+      <input type="tel" id="phone" name="phone" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+      <label for="password" class="text-sm font-medium text-gray-300">Password</label>
+      <input type="password" id="password" name="password" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+
+
+      <button
+        type="submit"
+        class="w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 rounded-xl shadow-lg transition transform hover:scale-105 mt-4"
+      >
+        Sign Up
+      </button>
+    </form>
+
+    <p class="text-center text-white/60 text-sm mt-6">
+      Already have an account?
+      <a href="login.html" class="underline hover:text-white font-medium">Log In</a>
+    </p>
+  </main>
+
+  <script src="signup.js"></script>
+</body>
+</html>
+

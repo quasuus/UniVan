@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniVan - Routes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-[#161122] text-[#f4f4f4] font-sans">
+
+
+  <div class="flex min-h-screen">
+    
+    <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideStudent" style="display:none;">
+      <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+      <nav class="space-y-4 text-lg text-gray-300">
+        <a href="dashboardStudent.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+        <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+        <a href="reservationsS.html" class="hover:text-purple-400 block hover:text-white-400 transition">Reservations</a>
+        <a href="SeatReservation.html" class="hover:text-purple-400 block hover:text-white-400 transition">Seat reservation</a>
+        <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+        <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+        <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+        <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+      </nav>
+    </aside>
+
+    <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideDriver" style="display:none;">
+      <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+      <nav class="space-y-4 text-lg text-gray-300">
+        <a href="dashboardDrivers.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+        <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+        <a href="reservationsD.html" class="hover:text-purple-400 block hover:text-white-400 transition">Scheduled trips</a>
+        <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+        <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+        <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+        <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+      </nav>
+    </aside>
+   
+
+    <main class="flex-1 p-8">
+      <h1 class="text-3xl font-bold mb-6">Routes</h1>
+
+      <input type="text" id="search-input" placeholder="Search a location..." class="w-full bg-[#221e2e] text-white p-3 rounded-lg placeholder-gray-400 mb-6 outline-none focus:ring-2 focus:ring-purple-500"/>
+        <div id="map" class="rounded-lg w-full h-80 shadow-md mb-8"></div>
+        <div class="routes-list">
+            <h2 class="text-2xl font-semibold mb-6">Available Routes</h2>
+              
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 1</h3>
+                    </div>
+                    <p class="text-gray-400">San Salvador to Santa Ana</p>
+                  </div>
+              
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 2</h3>
+                    </div>
+                    <p class="text-gray-400">San Miguel to Usulután</p>
+                  </div>
+              
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 3</h3>
+                    </div>
+                    <p class="text-gray-400">Ahuachapán to Sonsonate</p>
+                  </div>
+              
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 4</h3>
+                    </div>
+                    <p class="text-gray-400">La Libertad to San Vicente</p>
+                  </div>
+              
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 5</h3>
+                    </div>
+                    <p class="text-gray-400">Chalatenango to San Salvador</p>
+                  </div>
+              
+                  <div class="bg-[#221e2e] p-5 rounded-xl shadow-lg border border-[#2e2e34] hover:shadow-purple-500/20 transition duration-300">
+                    <div class="flex items-center gap-3 mb-2 text-purple-400 text-2xl">
+                      <span>📍</span>
+                      <h3 class="text-white text-lg font-semibold">Route 6</h3>
+                    </div>
+                    <p class="text-gray-400">Morazán to La Unión</p>
+                  </div>
+              
+                </div>
+              </div>
+    </main>
+  </div>
+  <script src="rutas.js"></script>
+  <script>
+    const userRole = localStorage.getItem('userRole');
+  
+    if (!userRole) {
+
+      window.location.href = 'login.html';
+    } else {
+      if (userRole === 'student') {
+        document.getElementById('asideStudent').style.display = 'block';
+        document.getElementById('asideDriver').style.display = 'none';
+      } else if (userRole === 'driver') {
+        document.getElementById('asideStudent').style.display = 'none';
+        document.getElementById('asideDriver').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
