@@ -1,4 +1,3 @@
-
 const fileInput = document.getElementById('fileInput');
 const profileImage = document.getElementById('profile-image');
 
