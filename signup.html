@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sign Up - UniVan</title>
+</head>
+<body class="bg-[#161122] font-sans">
+ 
+  <nav class="flex justify-between items-center p-4 bg-[#1A122A] text-white shadow-md">
+    <a href="landingpage.html" class="flex space-x-4 text-white font-bold text-xl">UniVan</a>
+  </nav>
+ 
+  <main class="max-w-md mx-auto mt-16 p-8 bg-[#1f1c2e] rounded-3xl shadow-2xl">
+    <h1 class="text-center text-white text-2xl font-bold mb-8">Sign Up for UniVan</h1>
+ 
+    <form id="signupForm" class="flex flex-col gap-5">
+ 
+      <div>
+        <label for="role" class="block text-sm font-medium text-gray-300 mb-2">
+          Are you a driver or a student?
+        </label>
+        <select
+          id="role"
+          name="role"
+          required
+          class="w-full p-3 bg-[#2a2638] text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="driver">Driver</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+ 
+      <div id="conductor-fields" class="hidden flex flex-col gap-4">
+        <label for="type_card" class="text-sm font-medium text-gray-300">Vehicle Type (Van)</label>
+        <input type="text" id="type_card" name="type_card" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+        <label for="license_number" class="text-sm font-medium text-gray-300">License Number</label>
+        <input type="text" id="license_number" name="license_number" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+      </div>
+ 
+      <div id="universitario-fields" class="hidden flex flex-col gap-4">
+        <label for="career" class="text-sm font-medium text-gray-300">Career</label>
+        <select id="career" name="career" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl">
+          <option value="" disabled selected>Select your career</option>
+          <option>Ingeniería en Sistemas</option>
+          <option>Medicina</option>
+          <option>Derecho</option>
+          <option>Administración de Empresas</option>
+          <option>Contaduría Pública</option>
+          <option>Arquitectura</option>
+          <option>Psicología</option>
+          <option>Comunicación Social</option>
+          <option>Enfermería</option>
+          <option>Ingeniería Civil</option>
+        </select>
+ 
+        <label for="university" class="text-sm font-medium text-gray-300">University</label>
+        <select id="university" name="university" class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl">
+          <option value="" disabled selected>Select your university</option>
+          <option value="ues">Universidad de El Salvador (UES)</option>
+          <option value="uca">Universidad Centroamericana José Simeón Cañas (UCA)</option>
+          <option value="udb">Universidad Don Bosco (UDB)</option>
+          <option value="unicaes">Universidad Católica de El Salvador (UNICAES)</option>
+          <option value="ujmd">Universidad Dr. José Matías Delgado (UJMD)</option>
+          <option value="utec">Universidad Tecnológica de El Salvador (UTEC)</option>
+        </select>
+      </div>
+ 
+      <label for="nombre" class="text-sm font-medium text-gray-300">Full Name</label>
+      <input type="text" id="nombre" name="nombre" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+      <label class="text-sm font-medium text-gray-300">Date of Birth</label>
+      <div class="flex gap-3">
+        <input type="number" id="day" name="day" placeholder="Day" min="1" max="31" required class="p-3 w-1/3 bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+        <input type="number" id="month" name="month" placeholder="Month" min="1" max="12" required class="p-3 w-1/3 bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+        <input type="number" id="year" name="year" placeholder="Year" min="1900" max="2025" required class="p-3 w-1/3 bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+      </div>
+ 
+      <label for="email" class="text-sm font-medium text-gray-300">Email</label>
+      <input type="email" id="email" name="email" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+      <label for="phone" class="text-sm font-medium text-gray-300">Phone</label>
+      <input type="tel" id="phone" name="phone" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+      <label for="password" class="text-sm font-medium text-gray-300">Password</label>
+      <input type="password" id="password" name="password" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+      <label for="confirmPassword" class="text-sm font-medium text-gray-300">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required class="p-3 w-full bg-[#2a2638] text-white border border-gray-600 rounded-xl" />
+ 
+      <button
+        type="submit"
+        class="w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 rounded-xl shadow-lg transition transform hover:scale-105 mt-4"
+      >
+        Sign Up
+      </button>
+    </form>
+ 
+    <p class="text-center text-white/60 text-sm mt-6">
+      Already have an account?
+      <a href="login.html" class="underline hover:text-white font-medium">Log In</a>
+    </p>
+  </main>
+ 
+  <script src="signup.js"></script>
+</body>
+</html>

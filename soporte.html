@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#161122] text-white font-sans flex">
+  <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideStudent" style="display:none;">
+    <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+    <nav class="space-y-4 text-lg text-gray-300">
+      <a href="dashboardStudent.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+      <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+      <a href="reservationsS.html" class="hover:text-purple-400 block hover:text-white-400 transition">Reservations</a>
+      <a href="SeatReservation.html" class="hover:text-purple-400 block hover:text-white-400 transition">Seat reservation</a>
+      <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+      <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+      <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+      <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+    </nav>
+  </aside>
+
+  <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideDriver" style="display:none;">
+    <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+    <nav class="space-y-4 text-lg text-gray-300">
+      <a href="dashboardDrivers.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+      <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+      <a href="reservationsD.html" class="hover:text-purple-400 block hover:text-white-400 transition">Scheduled trips</a>
+      <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+      <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+      <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+      <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+    </nav>
+  </aside>
+
+  <main class="flex-1 p-8">
+    <h1 class="text-3xl font-bold text-center mb-8 text-withe.400">How can we help?</h1>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #342854;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #342854;
+      padding: 15px;
+      text-align: right;
+    }
+    header a {
+      margin-left: 15px;
+      color: #bbb;
+      text-decoration: none;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .faq, .contact, .form {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #221e2e;
+      border-radius: 10px;
+    }
+    .faq h2, .contact h2, .form h2 {
+      margin-bottom: 10px;
+    }
+    details {
+      margin: 10px 0;
+      background: #342854;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact div {
+      margin: 10px 0;
+      padding: 10px;
+      background: #342854;
+      border-radius: 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #342854;
+      color: #fff;
+    }
+    button {
+      background: #6c2bd9;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #5319a9;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+ 
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>How do I request a ride?</summary>
+      <p>Open the app, set your destination and confirm your ride.</p>
+    </details>
+    <details>
+      <summary>What are the safety measures?</summary>
+      <p>All rides are tracked, drivers are verified and support is 24/7.</p>
+    </details>
+    <details>
+      <summary>How do I contact support?</summary>
+      <p>You can reach us by phone, email or live chat anytime.</p>
+    </details>
+ 
+  <section class="contact">
+    <h2>Contact us</h2>
+    <div>📞 Phone - 7186-0988 - Available 24/7</div>
+    <div>📧 Email - univan2025@gmail.com - Response within 24 hours</div>
+    <div>💬 Live Chat - Chat with a live agent via phone number</div>
+  </section>
+ 
+ <section class="form">
+    <h2>Submit a help request</h2>
+    <form>
+      <input type="email" placeholder="Your Email" required>
+      <select>
+        <option>Select issue type</option>
+        <option>Account</option>
+        <option>Payment</option>
+        <option>Technical issue</option>
+      </select>
+      <textarea rows="5" placeholder="Description"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+ 
+  <footer>
+    © 2025 UniVan. All rights reserved. | Terms of Service
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const currentPath = window.location.pathname.split('/').pop();
+    const links = document.querySelectorAll('aside nav a');
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute('href');
+
+      if (linkPath === currentPath) {
+        link.classList.add('text-purple-300');
+      }
+    });
+  });
+</script>
+<script>
+  const userRole = localStorage.getItem('userRole');
+
+  if (!userRole) {
+
+    window.location.href = 'login.html';
+  } else {
+    if (userRole === 'student') {
+      document.getElementById('asideStudent').style.display = 'block';
+      document.getElementById('asideDriver').style.display = 'none';
+    } else if (userRole === 'driver') {
+      document.getElementById('asideStudent').style.display = 'none';
+      document.getElementById('asideDriver').style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>
+ 
+    </body>

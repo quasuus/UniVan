@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Perfil - UniVan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#161122] text-white font-sans">
+ 
+<main class="">
+ 
+    <div class="flex min-h-screen">
+      <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideStudent" style="display:none;">
+        <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+        <nav class="space-y-4 text-lg text-gray-300">
+          <a href="dashboardStudent.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+          <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+          <a href="reservationsS.html" class="hover:text-purple-400 block hover:text-white-400 transition">Reservations</a>
+          <a href="SeatReservation.html" class="hover:text-purple-400 block hover:text-white-400 transition">Seat reservation</a>
+          <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+          <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+          <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+          <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+        </nav>
+      </aside>
+ 
+      <aside class="w-64 bg-[#1A122A] p-6 shadow-lg" id="asideDriver" style="display:none;">
+        <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+        <nav class="space-y-4 text-lg text-gray-300">
+          <a href="dashboardDrivers.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+          <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+          <a href="reservationsD.html" class="hover:text-purple-400 block hover:text-white-400 transition">Scheduled trips</a>
+          <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+          <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+          <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+          <a href="signup.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+        </nav>
+      </aside>
+       
+ 
+      <section class="flex flex-col items-center gap-4 text-center flex-1 mt-20">
+        <div id="profile-image"
+             class="w-36 h-36 rounded-full border-4 border-[#8e4de5] bg-cover bg-center shadow-lg"
+             style="background-image: url('https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/03/Centro-Hist%C3%B3rico-de-San-Salvador.png');">
+        </div>
+ 
+        <div class="mt-2">
+          <input type="file" id="fileInput" accept="image/*" class="hidden">
+          <button onclick="document.getElementById('fileInput').click()"
+                  class="bg-[#8e4de5] hover:bg-[#7a39d0] text-white px-4 py-2 rounded-md text-sm transition">
+            Change profile photo
+          </button>
+        </div>
+ 
+        <div>
+          <h1 class="text-2xl font-bold">Monica Ramirez</h1>
+         
+        </div>
+ 
+        <section class="mt-10 bg-[#1f1b2e] p-6 rounded-lg shadow-md space-y-4 w-full max-w-2xl text-left">
+          <h2 class="text-xl font-semibold border-b border-[#302944] pb-2 mb-4">Profile information</h2>
+ 
+          <form id="profileForm" class="grid md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-[#a393c8]">Nombre completo</p>
+              <input type="text" name="nombre" value="Monica Ramirez"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+            <div>
+              <p class="text-[#a393c8]">Email</p>
+              <input type="email" name="correo" value="monica.ramirez2026@hilasal.superate.org.sv"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+            <div>
+              <p class="text-[#a393c8]">Phone number</p>
+              <input type="text" name="telefono" value="+503 0000-0000"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+            <div>
+              <p class="text-[#a393c8]">Address</p>
+              <input type="text" name="direccion" value="San Salvador, El Salvador"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+            <div>
+              <p class="text-[#a393c8]">Birthdate</p>
+              <input type="text" name="nacimiento" value="1 de enero de 2000"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+            <div>
+              <p class="text-[#a393c8]">Role on the platform</p>
+              <input type="text" name="rol" value="-"
+                     class="font-medium text-white bg-transparent border-b border-gray-600 focus:outline-none focus:border-[#8e4de5]" disabled>
+            </div>
+          </form>
+ 
+          <div class="text-right pt-4">
+            <button id="editBtn"
+                    class="bg-[#8e4de5] hover:bg-[#7a39d0] text-white px-5 py-2 rounded-md transition font-medium">
+              Edit Profile
+            </button>
+          </div>
+        </section>
+      </section>
+ 
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('aside nav a');
+ 
+      links.forEach(link => {
+        const linkPath = link.getAttribute('href');
+ 
+        if (linkPath === currentPath) {
+          link.classList.add('text-purple-300');
+        }
+      });
+    });
+  </script>
+<script>
+  const userRole = localStorage.getItem('userRole');
+
+  if (userRole === 'student') {
+    document.getElementById('asideStudent').style.display = 'block';
+    document.getElementById('asideDriver').style.display = 'none';
+  } else if (userRole === 'driver') {
+    document.getElementById('asideStudent').style.display = 'none';
+    document.getElementById('asideDriver').style.display = 'block';
+  } else {
+
+    console.log("Rol no definido en localStorage.");
+  }
+</script>
+<script src="profile.js"></script>
+</body>
+</html>

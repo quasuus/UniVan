@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniVan - Reserva de Asientos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .asiento {
+      position: relative;
+      width: 60px;
+      height: 80px;
+      background-color: #ac78ff;
+      border-radius: 10px 10px 4px 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .asiento::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: 50px;
+      height: 30px;
+      background-color: #ac78ff;
+      border-radius: 10px 10px 0 0;
+    }
+    .asiento.ocupado {
+      background-color: #3d157e;
+    }
+    .asiento.ocupado::before {
+      background-color: #3d157e;
+    }
+    .asiento span {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-[#161122] text-white font-sans">
+   <div class="flex min-h-screen">
+    <aside class="w-64 bg-[#1A122A] p-6 shadow-lg">
+      <h2 class="text-2xl font-bold text-white-400 mb-8">UniVan</h2>
+      <nav class="space-y-4 text-lg text-gray-300">
+        <a href="dashboardStudent.html" class="hover:text-purple-400 block hover:text-white-400 transition">Home</a>
+        <a href="profile.html" class="hover:text-purple-400 block hover:text-white-400 transition">My profile</a>
+        <a href="reservationsS.html" class="hover:text-purple-400 block hover:text-white-400 transition">Reservations</a>
+        <a href="SeatReservation.html" class="hover:text-purple-400 block hover:text-white-400 transition">Seat reservation</a>
+        <a href="Vehicles.html" class="hover:text-purple-400 block hover:text-white-400 transition">Vehicles available</a>
+        <a href="rutas.html" class="hover:text-purple-400 block hover:text-white-400 transition">Routes</a>
+        <a href="soporte.html" class="hover:text-purple-400 block hover:text-white-400 transition">Support</a>
+        <a href="login.html" class="hover:text-purple-400 block hover:text-white-400 transition text-red-400">Log out</a>
+      </nav>
+    </aside>
+ 
+
+   
+    <div class="flex-1 p-8">
+
+  
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold">Reserve your seat</h2>
+      </div>
+
+      <!-- Carrusel -->
+      <div class="flex flex-col md:flex-row items-center md:space-x-6 space-y-6 md:space-y-0 mb-20 gap-20">
+        <img src="Imágenes(Seats)/S1-1.1.avif" alt="Imagen 1" class="w-[300px] md:w-[330px] h-[300px] md:h-[330px] object-cover rounded-2xl shadow-lg hover:scale-105 transition" />
+        <img src="Imágenes(Seats)/S1.1-2.jpg" alt="Imagen 2" class="w-[300px] md:w-[330px] h-[300px] md:h-[330px] object-cover rounded-2xl shadow-lg hover:scale-105 transition" />
+        <img src="Imágenes(Seats)/Seats.jpg" alt="Imagen 3" class="w-[300px] md:w-[330px] h-[300px] md:h-[330px] object-cover rounded-2xl shadow-lg hover:scale-105 transition" />
+      </div>
+
+      <!-- Seats -->
+      <div id="bus" class="grid grid-cols-4 gap-4 justify-center mb-8"></div>
+
+      <div class="text-center space-x-8">
+        <div class="inline-flex items-center">
+          <span class="w-5 h-5 bg-[#ac78ff] rounded mr-2"></span>
+          available
+        </div>
+        <div class="inline-flex items-center">
+          <span class="w-5 h-5 bg-[#3d157e] rounded mr-2"></span>
+          occupied
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('aside nav a');
+  
+      links.forEach(link => {
+        const linkPath = link.getAttribute('href');
+  
+        if (linkPath === currentPath) {
+          link.classList.add('text-purple-300');
+        }
+      });
+    });
+  </script>
+      
+    <script src="Min.js"></script>
+</body>
+</html>
